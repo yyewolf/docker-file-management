@@ -8,5 +8,6 @@ RUN go build -o /app/docker-file-management /app/cmd/main/main.go
 
 FROM alpine
 COPY --from=backend /app/docker-file-management .
+COPY --from=backend /app/www ./www
 USER 1000
 ENTRYPOINT ["/docker-file-management"]
