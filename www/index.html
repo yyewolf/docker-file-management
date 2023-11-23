@@ -1,0 +1,4 @@
+<!-- {{ . }} is array of files, display them as link -->
+{{ range . }}
+    <a href="/files/{{ . }}">{{ . }}</a>
+{{ end }}
