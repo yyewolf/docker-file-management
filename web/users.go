@@ -30,7 +30,7 @@ func userPanel(c echo.Context) error {
 
 func userFile(c echo.Context) error {
 	// Check X-Forwarded-User header
-	username := c.Request().Header.Get("X-Forwarded-Email")
+	username := c.Request().Header.Get("X-Forwarded-User")
 	if username == "" {
 		return c.JSON(403, map[string]interface{}{
 			"message": "forbidden",
